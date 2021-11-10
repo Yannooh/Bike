@@ -39,13 +39,15 @@ data_jour = data[['dteday', 'hum', 'windspeed', 'temp', 'atemp', 'cnt', 'weather
 data_jour_min = data_jour.groupby(['dteday']).mean()
 #print(data_jour_min.head(25))
 
-data_jour_min.to_json('./bike.json')
+data_jour_min.to_json('./bike_by_day.json')
+data_jour_min.to_csv('./bike_by_day.csv')
 
 import json
-with open('./bike.json', 'r') as file:
+with open('./bike_by_day.json', 'r') as file:
     data = json.load(file)
 
 from fastapi import FastAPI
+from fastapi.responses import FileResponse
 
 #Declaration de l'API
 
@@ -58,10 +60,7 @@ def get_status():
     return {'1'}
     abort(404)
 
-  
-@api.get('/bike')
-def get_other():
-    return {
-        'method': 'get',
-        'endpoint': '/bike'
-    }
+@api.get('/bike_data')
+def get_bike_data():
+    return FileResponse('./bike_by_day.json')
+    abort(404)
