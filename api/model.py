@@ -10,6 +10,7 @@ class WeathersitEnum(str, Enum):
     cloudy = 'cloudy'
 
 class BikeHourData(BaseModel):
+    dteday: str
     hr : int
     weathersit : WeathersitEnum
     hum : float
