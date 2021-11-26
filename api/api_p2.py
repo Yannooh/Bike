@@ -1,5 +1,4 @@
-
-#Programmation du déploiement de l'API
+# Déploiement de l'API
 
 import matplotlib.pyplot as plt
 import numpy as np
