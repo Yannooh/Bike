@@ -19,7 +19,7 @@ def transform_data(data):
     data_day_of_week = pd.get_dummies(data['day_of_week'], dtype=int, prefix='day')
     data = data.merge(data_day_of_week, how='inner', left_index=True, right_index=True)
 
-    data_jour = data[['dteday', 'hum', 'windspeed', 'temp', 'atemp', 'cnt', 'weathersit_clear', 'weathersit_cloudy', 'weathersit_rainy', 'weathersit_snowy',
+    data_jour = data[['dteday', 'hum', 'windspeed', 'temp', 'atemp', 'weathersit_clear', 'weathersit_cloudy', 'weathersit_rainy', 'weathersit_snowy',
                   'month_1',    'month_2',      'month_3',      'month_4',      'month_5',      'month_6',      'month_7',      'month_8',      'month_9',      'month_10',     'month_11',     'month_12',
                   'day_0',      'day_1',        'day_2',        'day_3',        'day_4',        'day_5',        'day_6']].copy()
     
