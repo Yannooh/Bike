@@ -9,6 +9,7 @@ class WeathersitEnum(str, Enum)
     snowy = 'snowy'
     rainy = 'rainy'
     cloudy = 'cloudy'
+    ...
 
 
 
