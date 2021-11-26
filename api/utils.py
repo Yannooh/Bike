@@ -1,7 +1,7 @@
 import pandas as pd
 import datetime
 
-
+# Permet, a partir des données brutes, de transformer les données en lien avec les modèles
 def transform_data(data):
     data['dteday'] = pd.to_datetime(data['dteday'], format="%Y %m %d")
     data['year'] = data['dteday'].dt.year
