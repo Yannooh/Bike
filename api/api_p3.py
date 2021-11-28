@@ -50,3 +50,14 @@ def get_bike_data():
     return np.sqrt(mean_squared_error(y_train, gb.predict(X_train)))
         #print("\nRMSE_test:",np.sqrt(mean_squared_error(y_test, gb.predict(X_test))))
     abort(404)
+    
+    # @api.post('/rf_model')
+# def get_bike_data(data:Bikedata):
+#     return data
+
+#     transformed_data = transform_data(data)
+#     return data
+
+# @api.post('/gb_model')
+# def get_bike_data(data:Bikedata):
+#     return data
