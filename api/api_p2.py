@@ -44,8 +44,8 @@ data_target = data_jour_min['cnt'].shift(-1, axis = 0)
 data_target = data_target.rename("target")
 #print(data_target.head(5))
 
-df_24 = data_target[:24].drop(columns="dteday").to_dict(orient="records")
-print(df_24)
+#df_24 = data_target[:24].drop(columns="dteday").to_dict(orient="records")
+#print(df_24)
 
 data_jour_min = data_jour_min.merge(data_target, on='dteday')
 
