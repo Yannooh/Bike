@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTException
+from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
 import numpy as np
 import pandas as pd
@@ -59,7 +59,7 @@ def get_bike_data(data:BikeData):
 
 # On vérifie bien que les lignes attendus sont au nombre de 24 BikeHourData
     if (len(data) != 24):
-        return HTTException(400,"Need exactly 24 distinct hours")
+        return HTTPException(400,"Need exactly 24 distinct hours")
 
 
     transformed_data = transform_data(data)
