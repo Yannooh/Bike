@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTException
+from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
 import numpy as np
 import pandas as pd
