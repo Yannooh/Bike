@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTException
 from fastapi.responses import FileResponse
 import numpy as np
 import pandas as pd
@@ -6,6 +6,7 @@ import joblib
 #from model import pylance
 from model import BikeData
 from utils import transform_data
+
 
 
 # data = pd.read_csv('https://assets-datascientest.s3-eu-west-1.amazonaws.com/de/total/bike.csv')
@@ -53,8 +54,14 @@ def get_bike_data():
 #         #print("\nRMSE_test:",np.sqrt(mean_squared_error(y_test, gb.predict(X_test))))
 #     abort(404)
 
-@api.post('/rf_model')
+@api.post('/prediction/rf_model')
 def get_bike_data(data:BikeData):
+
+# On vérifie bien que les lignes attendus sont au nombre de 24 BikeHourData
+    if len(data) != '24'
+        return HTTException(400,"Need exactly 24 distinct hours")
+
+
     transformed_data = transform_data(data)
     return data
 
