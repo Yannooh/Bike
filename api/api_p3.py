@@ -7,12 +7,9 @@ import joblib
 from model import BikeData
 from utils import transform_data
 
-
-
 # data = pd.read_csv('https://assets-datascientest.s3-eu-west-1.amazonaws.com/de/total/bike.csv')
-
-#model_rf = joblib.load("rf_model.joblib")
-#model_gb = joblib.load("gb_model.joblib")
+model_rf = joblib.load("rf_model.joblib")
+model_gb = joblib.load("gb_model.joblib")
 
 #Declaration de l'API
 
@@ -57,15 +54,17 @@ def get_bike_data():
 @api.post('/prediction/rf_model')
 def get_bike_data(data:BikeData):
 
-# On vérifie bien que les lignes attendus sont au nombre de 24 BikeHourData
+# On vérifie bien que les lignes attendues sont au nombre de 24 BikeHourData
     if (len(data) != 24):
         return HTTPException(400,"Need exactly 24 distinct hours")
-
-
     transformed_data = transform_data(data)
+    prediction = model_rf.predict(transformed_data)
+    transformed_data['target']=prediction
     return transformed_data.to_html()
 
-@api.post('/gb_model')
+@api.post('/prediction/gb_model')
 def get_bike_data(data:BikeData):
     transformed_data = transform_data(data)
+    prediction = model_gb.predict(transformed_data)
+    transformed_data['target']=prediction
     return transformed_data.to_html()

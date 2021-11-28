@@ -158,7 +158,7 @@ X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.30, random_state=
 
 rf = RandomForestRegressor().fit(X_train, y_train)
 
-joblib.dump(rf, "model.joblib")
+joblib.dump(rf, "rf_model.joblib")
 
 # On obtient le RMSE pour le dataset du train
 print("\nRMSE_train:",np.sqrt(mean_squared_error(y_train, rf.predict(X_train))))
@@ -171,7 +171,7 @@ X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.30, random_state=
 
 gb = GradientBoostingRegressor().fit(X_train, y_train)
 
-joblib.dump(gb, "model.joblib")
+joblib.dump(gb, "gb_model.joblib")
 
 # Get the RMSE for the train dataset
 print("\nRMSE_train:",np.sqrt(mean_squared_error(y_train, gb.predict(X_train))))
