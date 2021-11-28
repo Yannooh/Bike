@@ -2,6 +2,8 @@
 from pydantic import BaseModel
 from typing import List
 from enum import Enum
+from model import pylance
+
 
 # Définition de l'énumération class WeathersitEnum
 class WeathersitEnum(str, Enum):
