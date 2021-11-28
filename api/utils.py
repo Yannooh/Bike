@@ -3,29 +3,9 @@ import datetime
 
 # Permet, a partir des données brutes, de transformer les données en lien avec les modèles
 def transform_data(data):
-    
-    data_test = [
-    {"dteday": "2011-01-01", "hr" : 0, "weathersit": "clear", "hum": 0.81, "windspeed":0.0, "temp":3.2799999999999994, "atemp":3.0014000000000003, "cnt":16},
-    {"dteday": "2011-01-01", "hr" : 1, "weathersit": "clear", "hum": 0.8, "windspeed":0.0, "temp":2.34, "atemp":1.9982000000000006, "cnt":40}
-    ]
-
-    #data_test=dict(data)
-    
-    #[BikeHourData(dteday=‘2011-01-01’, hr=0, weathersit=<WeathersitEnum.clear: ‘clear’>, hum=0.81, windspeed=0.0, temp=3.2799999999999994, atemp=3.0014000000000003, cnt=16), 
-    # BikeHourData(dteday=‘2011-01-01’, hr=1, weathersit=<WeathersitEnum.clear: ‘clear’>, hum=0.8, windspeed=0.0, temp=2.34, atemp=1.9982000000000006, cnt=40)]
-
-    #object_dict_data = dict((x.dteday, x) for x in data)
-
-    #signals = [Signal(3, 9), Signal(4, 16)]
-    #pandas.DataFrame.from_records([s.to_dict() for s in signals])
 
     data = pd.DataFrame([o.__dict__ for o in data])
-
-    print(data)
-    #data['weathersit']
-    #data = pd.DataFrame(data, columns=data.keys())
-    #data=pd.DataFrame(object_dict_data)
-
+    
     data.to_csv('./data_by_hour.csv')
 
     data['dteday'] = pd.to_datetime(data['dteday'], format="%Y %m %d")
@@ -41,8 +21,6 @@ def transform_data(data):
     for weather in ('weathersit_clear', 'weathersit_cloudy', 'weathersit_rainy', 'weathersit_snowy'):
         if (weather not in data):
             data[weather]='0'
-
-    print(data)
 
     data_month = pd.get_dummies(data['month'], dtype=int, prefix='month')
     data = data.merge(data_month, how='inner', left_index=True, right_index=True)
@@ -87,27 +65,3 @@ def transform_data(data):
     transformed_data = data_jour_min
 
     return transformed_data
-
-class EnterData(object):
-    def __init__(self, dteday, hr, weathersit, hum, windspeed, temp, atemp, cnt):
-        self.dteday = dteday
-        self.hr = hr
-        self.weathersit = weathersit
-        self.hum = hum
-        self.windspeed = windspeed
-        self.temp = temp
-        self.atemp = atemp
-        self.cnt = cnt
-
-    def to_dict(self):
-        return {
-            'dteday': self.dteday,
-            'hr': self.hr,
-            'weathersit' : self.weathersit,
-            'hum' : self.hum,
-            'windspeed' : self.windspeed,
-            'temp' : self.temp,
-            'atemp' : self.atemp,
-            'cnt' : self.cnt
-        }
-    
