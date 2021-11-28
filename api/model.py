@@ -17,6 +17,7 @@ class BikeHourData(BaseModel):
     windspeed : float
     temp : float
     atemp : float
+    cnt : int
 
 
 BikeData = List[BikeHourData]
