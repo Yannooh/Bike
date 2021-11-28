@@ -60,7 +60,7 @@ def get_bike_data(data:BikeData):
     transformed_data = transform_data(data)
     prediction = model_rf.predict(transformed_data)
     transformed_data['target']=prediction
-    return transformed_data.to_html()
+    return prediction[0]
 
 @api.post('/prediction/gb_model')
 def get_bike_data(data:BikeData):
@@ -71,4 +71,4 @@ def get_bike_data(data:BikeData):
     transformed_data = transform_data(data)
     prediction = model_gb.predict(transformed_data)
     transformed_data['target']=prediction
-    return transformed_data.to_html()
+    return prediction[0]
