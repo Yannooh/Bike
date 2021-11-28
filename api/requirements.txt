@@ -6,3 +6,4 @@ joblib==1.1.0
 jsonpatch==1.22
 jsonpointer==2.0
 jsonschema==3.2.0
+Python 3.9.2
