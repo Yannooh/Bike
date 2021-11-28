@@ -56,7 +56,7 @@ def get_bike_data():
 @api.post('/rf_model')
 def get_bike_data(data:BikeData):
     transformed_data = transform_data(data)
-    return data
+    return transformed_data.to_html()
 
 @api.post('/gb_model')
 def get_bike_data(data:BikeData):
