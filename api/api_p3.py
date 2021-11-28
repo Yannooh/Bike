@@ -58,7 +58,7 @@ def get_bike_data():
 def get_bike_data(data:BikeData):
 
 # On vérifie bien que les lignes attendus sont au nombre de 24 BikeHourData
-    if len(data) != '24'
+    if len(data) != 24
         return HTTException(400,"Need exactly 24 distinct hours")
 
 
