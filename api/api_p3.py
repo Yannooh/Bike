@@ -64,6 +64,10 @@ def get_bike_data(data:BikeData):
 
 @api.post('/prediction/gb_model')
 def get_bike_data(data:BikeData):
+
+# On vérifie bien que les lignes attendues sont au nombre de 24 BikeHourData
+    if (len(data) != 24):
+        return HTTPException(400,"Need exactly 24 distinct hours")
     transformed_data = transform_data(data)
     prediction = model_gb.predict(transformed_data)
     transformed_data['target']=prediction
