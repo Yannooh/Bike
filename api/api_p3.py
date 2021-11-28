@@ -25,9 +25,9 @@ def get_status():
     abort(404)
 
 #test du fichier par jour 
-@api.get('/bike_data')
+@api.get('/bike_data_day')
 def get_bike_data():
-    return FileResponse('./bike_by_day.json')
+    return FileResponse('./data_by_day.json')
     abort(404)
 
 # @api.get('/bike_data_day')
@@ -60,4 +60,5 @@ def get_bike_data(data:BikeData):
 
 @api.post('/gb_model')
 def get_bike_data(data:BikeData):
-    return data
+    transformed_data = transform_data(data)
+    return transformed_data.to_html()
