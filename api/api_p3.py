@@ -3,7 +3,7 @@ from fastapi.responses import FileResponse
 import numpy as np
 import pandas as pd
 import joblib
-from model import pylance
+#from model import pylance
 
 
 data = pd.read_csv('https://assets-datascientest.s3-eu-west-1.amazonaws.com/de/total/bike.csv')
