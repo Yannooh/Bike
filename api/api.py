@@ -25,7 +25,7 @@ def get_status():
 #test du fichier par jour 
 @api.get('/bike_data_day')
 def get_bike_data():
-    return FileResponse('./data_by_day.json')
+    return FileResponse('./bike_by_day.json')
     abort(404)
 
 # @api.get('/bike_data_day')
