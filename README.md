@@ -1,4 +1,9 @@
-# Bike
+# Prévision du nombre de vélos pris le lendemain pour un service de location
+## Introduction
+
+## Données
+Les données utilisées pour ce projet proviennent de cette source :
+<a href="https://assets-datascientest.s3-eu-west-1.amazonaws.com/de/total/bike.csv" target="_blank"></a>
 
 ## Livrables du projet :
 
@@ -15,5 +20,3 @@
 - docker-compose.yml unique
 - On garde FastAPI dans les .py
 - Effectuer des tests comme dans l'éval docker
-
-AAAAAAA
