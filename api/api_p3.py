@@ -19,7 +19,7 @@ api = FastAPI(
 
 @api.get('/status')
 def get_status():
-    return {'1'}
+    return 1
     abort(404)
 
 #test du fichier par jour 
@@ -31,24 +31,6 @@ def get_bike_data():
 # @api.get('/bike_data_day')
 # def get_bike_data_day():
 #     return df
-#     abort(404)
-
-# @api.get('/predict_random_forest')
-# def get_bike_data():
-#     return np.sqrt(mean_squared_error(y_train, rf.predict(X_train)))
-#         #print("\nRMSE_test:",np.sqrt(mean_squared_error(y_test, gb.predict(X_test))))
-#     abort(404)
-
-# @api.get('/predict_regression_lineaire')
-# def get_bike_data():
-#     return mean_squared_error(y_train,y_pred_train,squared=False)
-#         #print("\nRMSE_test:",np.sqrt(mean_squared_error(y_test, gb.predict(X_test))))
-#     abort(404)
-
-# @api.get('/predict_gradient_boost')
-# def get_bike_data():
-#     return np.sqrt(mean_squared_error(y_train, gb.predict(X_train)))
-#         #print("\nRMSE_test:",np.sqrt(mean_squared_error(y_test, gb.predict(X_test))))
 #     abort(404)
 
 @api.post('/prediction/rf_model')
