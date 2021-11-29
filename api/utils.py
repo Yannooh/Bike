@@ -6,7 +6,7 @@ def transform_data(data):
 
     data = pd.DataFrame([o.__dict__ for o in data])
     
-    data.to_csv('./data_by_hour.csv')
+    #data.to_csv('./data_by_hour.csv')
 
     data['dteday'] = pd.to_datetime(data['dteday'], format="%Y %m %d")
     data['year'] = data['dteday'].dt.year
@@ -20,23 +20,23 @@ def transform_data(data):
 
     for weather in ('weathersit_clear', 'weathersit_cloudy', 'weathersit_rainy', 'weathersit_snowy'):
         if (weather not in data):
-            data[weather]='0'
+            data[weather]=0
 
     data_month = pd.get_dummies(data['month'], dtype=int, prefix='month')
     data = data.merge(data_month, how='inner', left_index=True, right_index=True)
 
     for month in ('month_1',    'month_2',      'month_3',      'month_4',      'month_5',      'month_6',      'month_7',      'month_8',      'month_9',      'month_10',     'month_11',     'month_12'):
         if (month not in data):
-            data[month]='0'
+            data[month]=0
 
     data_day_of_week = pd.get_dummies(data['day_of_week'], dtype=int, prefix='day')
     data = data.merge(data_day_of_week, how='inner', left_index=True, right_index=True)
 
     for day in ('day_0','day_1','day_2','day_3','day_4','day_5','day_6'):
         if (day not in data):
-            data[day]='0'
+            data[day]=0
 
-    data.to_csv('./data_by_hour.csv')
+    #data.to_csv('./data_by_hour.csv')
 
     data_jour = data[['dteday', 'hum', 'windspeed', 'temp', 'atemp', 'cnt', 'weathersit_clear', 'weathersit_cloudy', 'weathersit_rainy', 'weathersit_snowy',
                   'month_1',    'month_2',      'month_3',      'month_4',      'month_5',      'month_6',      'month_7',      'month_8',      'month_9',      'month_10',     'month_11',     'month_12',
@@ -46,13 +46,13 @@ def transform_data(data):
 
     for weather in ('weathersit_clear', 'weathersit_cloudy', 'weathersit_rainy', 'weathersit_snowy'):
         if (weather not in data_jour_min):
-            data_jour_min[weather]='0'
+            data_jour_min[weather]=0
     for month in ('month_1',    'month_2',      'month_3',      'month_4',      'month_5',      'month_6',      'month_7',      'month_8',      'month_9',      'month_10',     'month_11',     'month_12'):
         if (month not in data_jour_min):
-            data_jour_min[month]='0'
+            data_jour_min[month]=0
     for day in ('day_0','day_1','day_2','day_3','day_4','day_5','day_6'):
         if (day not in data_jour_min):
-            data_jour_min[day]='0'
+            data_jour_min[day]=0
 
 
     #data_target = data_jour_min['cnt'].shift(-1, axis = 0)
@@ -60,7 +60,7 @@ def transform_data(data):
     #data_jour_min = data_jour_min.merge(data_target, on='dteday')
     #data_jour_min = data_jour_min.fillna(data_jour_min.mean())
 
-    data_jour_min.to_csv('./data_by_day.csv')
+    #data_jour_min.to_csv('./data_by_day.csv')
 
     transformed_data = data_jour_min
 
