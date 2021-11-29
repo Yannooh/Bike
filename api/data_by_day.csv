@@ -1,2 +1,2 @@
-dteday,hum,windspeed,temp,atemp,cnt,weathersit_clear,weathersit_cloudy,weathersit_snowy,month_2,day_0,weathersit_rainy,month_1,month_3,month_4,month_5,month_6,month_7,month_8,month_9,month_10,month_11,month_12,day_1,day_2,day_3,day_4,day_5,day_6
-2021-02-01,0.8058333333333335,10.74987083333333,8.175833333333335,7.999249999999999,41.041666666666664,0.5,0.4166666666666667,0.08333333333333333,1.0,1.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+dteday,hum,windspeed,temp,atemp,cnt,weathersit_clear,weathersit_cloudy,weathersit_snowy,month_12,day_2,weathersit_rainy,month_1,month_2,month_3,month_4,month_5,month_6,month_7,month_8,month_9,month_10,month_11,day_0,day_1,day_3,day_4,day_5,day_6
+2021-12-01,0.8058333333333333,10.749870833333333,8.175833333333333,7.999250000000001,41.041666666666664,0.5,0.4166666666666667,0.08333333333333333,1.0,1.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
