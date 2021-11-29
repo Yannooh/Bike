@@ -2,8 +2,8 @@
 ## Introduction
 
 ## Données
-Les données utilisées pour ce projet proviennent de cette source :
-<a href="https://assets-datascientest.s3-eu-west-1.amazonaws.com/de/total/bike.csv" target="_blank"></a>
+Les données utilisées pour ce projet proviennent de 
+<a href="https://assets-datascientest.s3-eu-west-1.amazonaws.com/de/total/bike.csv" target="_blank"> cette source</a> 
 
 ## Livrables du projet :
 
