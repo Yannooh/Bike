@@ -17,6 +17,7 @@ api = FastAPI(
   title='API_Bike'
 )
 
+# On teste si l'api fonctionne correctement
 @api.get('/status')
 def get_status():
     return 1
@@ -25,7 +26,7 @@ def get_status():
 #test du fichier par jour 
 @api.get('/bike_data_day')
 def get_bike_data():
-    return FileResponse('./data_by_day.json')
+    return FileResponse('./bike_by_day.json')
     abort(404)
 
 # @api.get('/bike_data_day')

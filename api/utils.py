@@ -6,8 +6,6 @@ def transform_data(data):
 
     data = pd.DataFrame([o.__dict__ for o in data])
     
-    #data.to_csv('./data_by_hour.csv')
-
     data['dteday'] = pd.to_datetime(data['dteday'], format="%Y %m %d")
     data['year'] = data['dteday'].dt.year
     data['month'] = data['dteday'].dt.month
@@ -36,8 +34,6 @@ def transform_data(data):
         if (day not in data):
             data[day]=0
 
-    #data.to_csv('./data_by_hour.csv')
-
     data_jour = data[['dteday', 'hum', 'windspeed', 'temp', 'atemp', 'cnt', 'weathersit_clear', 'weathersit_cloudy', 'weathersit_rainy', 'weathersit_snowy',
                   'month_1',    'month_2',      'month_3',      'month_4',      'month_5',      'month_6',      'month_7',      'month_8',      'month_9',      'month_10',     'month_11',     'month_12',
                   'day_0',      'day_1',        'day_2',        'day_3',        'day_4',        'day_5',        'day_6']].copy()
@@ -53,14 +49,6 @@ def transform_data(data):
     for day in ('day_0','day_1','day_2','day_3','day_4','day_5','day_6'):
         if (day not in data_jour_min):
             data_jour_min[day]=0
-
-
-    #data_target = data_jour_min['cnt'].shift(-1, axis = 0)
-    #data_target = data_target.rename("target")
-    #data_jour_min = data_jour_min.merge(data_target, on='dteday')
-    #data_jour_min = data_jour_min.fillna(data_jour_min.mean())
-
-    #data_jour_min.to_csv('./data_by_day.csv')
 
     transformed_data = data_jour_min
 
