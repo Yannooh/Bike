@@ -17,6 +17,7 @@ api = FastAPI(
   title='API_Bike'
 )
 
+# On teste si l'api fonctionne correctement
 @api.get('/status')
 def get_status():
     return 1
