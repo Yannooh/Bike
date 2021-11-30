@@ -14,4 +14,5 @@ RUN apt-get update && pip3 install -r requirements.txt
 EXPOSE 8000
 
 # On exécute uvicorn ... au local
+#CMD uvicorn api:api --host 0.0.0.0
 CMD uvicorn api:api --host 0.0.0.0
