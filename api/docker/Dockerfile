@@ -2,10 +2,7 @@
 FROM debian:latest
 
 # On met à jour sinon on installe python3 et requests
-#RUN apt-get update && apt-get install python3-pip -y && pip3 install requests
-
-# On installe fastapi uvicorn
-RUN pip install fastapi uvicorn
+RUN apt-get update && apt-get install python3-pip -y && pip3 install requests
 
 # On recopie api_p3.py dans api de notre image ou contenaire
 COPY api_p3.py /api/
