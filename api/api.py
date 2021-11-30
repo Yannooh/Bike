@@ -22,7 +22,7 @@ api = FastAPI(
 def get_status():
     return 1
     abort(404)
-
+ 
 #test du fichier par jour 
 @api.get('/bike_data_day')
 def get_bike_data():
