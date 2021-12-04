@@ -32,7 +32,8 @@ L'api via le script python api.py, peut être exécuter de deux manières possib
 
 Python3
 Pour lancer l'api, on peut procéder de la manière suivante :
-1. Créer un environnement virtuel en local et charger les dépendances contenues dans le fichier requirements.txt comme ceci :
-2. 
-3.
+1. Créer un environnement virtuel en local et charger les dépendances contenues dans le fichier requirements.txt
+2. Tapez la commande suivante qui permet de lancer le serveur crée par FastAPI : uvicorn api:api --reload
+3. Testez les requêtes ci-après pour voir
+4.
 
