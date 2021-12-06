@@ -35,6 +35,6 @@ L'api via le script python api.py, peut être exécuté de la manière ci-après
 - Ouvrez le terminal et exécuter le fichier Docker-compose par la commande : 
 $ docker-compose up
 - Créez un environnement virtuel en local et charger les dépendances contenues dans le fichier requirements.txt
-- Tapez la commande suivante qui permet de lancer le serveur crée par FastAPI : uvicorn api:api --reload
+
 
 
