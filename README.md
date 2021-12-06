@@ -14,6 +14,19 @@ Pour se faire, nous utilisons deux modèles de Machines Learning à savoir Rando
 ## Données
 Les données utilisées pour ce projet proviennent de <a href="https://assets-datascientest.s3-eu-west-1.amazonaws.com/de/total/bike.csv" target="_blank"> cette source</a>.
 
+### Description des données	
+
+Nom de la colonne	             Description
+dteday	                     jour au format yyyy-mm-dd
+hr	                     heure
+weathersit	             classe de la météo
+hum	                     humidité relative
+windspeed	             vitesse du vent
+temp	                     température en °C
+atemp	                     température ressentie en °C
+cnt	                     décompte du nombre de vélos utilisés à cette heure
+
+
 ## Installation des outils de fonctionnement de l'api
 Bien que pas obligatoire, dans ce projet nous avons fait le choix d'utiliser les outils suivants pour nous aider dans la prédiction du nombre de vélos à la location au lendemain  :
 - Docker hub : service de registre de référentiel fourni par Docker Inc
