@@ -21,15 +21,13 @@ Bien que pas obligatoire, dans ce projet nous avons fait le choix d'utiliser les
 
 Installation :
 
-Installation
-
-	1. Créez un compte si ce n'est pas fait sur Docker Hub et cliquez sur le un repository suivant "24241702 / bike_docker_image"
+1. Créez un compte si ce n'est pas fait sur Docker Hub et cliquez sur le un repository suivant "24241702 / bike_docker_image"
 	
-	2. Installez Docker Desktop en local, s'identifiez pour avoir accès au repository "24241702 / bike_docker_image"
+2. Installez Docker Desktop en local, s'identifiez pour avoir accès au repository "24241702 / bike_docker_image"
 	
-	3. Allez sur l'image "24241702 / bike_docker_image" et cliquez sur les 3 points en bleu pour sélectionnez "push to hub".
+3. Allez sur l'image "24241702 / bike_docker_image" et cliquez sur les 3 points en bleu pour sélectionnez "push to hub".
 	
-  4. Allez sur Containers / Apps, notre image apparaîtra et cliquez sur "start" pour exécuter notre api
+4. Allez sur Containers / Apps, notre image apparaîtra et cliquez sur "start" pour exécuter notre api
 
 
 ## Exécution de l'api
