@@ -91,7 +91,7 @@ Ensuite, nous allons inserrer le jeu des 24 données dans le request body et ex�
 - Random Forest : http://localhost:8000/docs#/default/get_bike_data_prediction_rf_model_post
 - Gradient Boost : http://localhost:8000/docs#/default/get_bike_data_prediction_gb_model_post
 
-
+En définitif, nous constatons après prediction que le modèle Random Forest est plus performant que celui de Gracient Boost.
 
 
 
