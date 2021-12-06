@@ -73,7 +73,7 @@ Si besoin nous pouvons au préalable tester depuis le terminal nos scrypts pytho
 - $ python3 prediction_gb.py
 
 
-Nous devons avoir un jeu de données de 24 lignes représentants les locations horaires journalières de ce type :
+Cependant, nous devons avoir un jeu de données de 24 lignes représentants les locations horaires journalières de ce type :
 [
   {
     "dteday": "2021-01-01",
