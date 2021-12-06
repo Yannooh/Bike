@@ -41,7 +41,7 @@ $ docker-compose up
 ## Tests
 Ici, nous commencerons par exécuter le premier test qui est celui de vérifier effectivement que notre api fonctionne bien. Et ce la passe par la commande suivante : http://0.0.0.0:8000/status
 
-# Prérequis :
+### Prérequis :
 Nous devons avoir un jeu de données de 24 lignes représentants les locations horaires journalières de ce type :
 [
   {
