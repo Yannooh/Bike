@@ -9,7 +9,7 @@
 ## Introduction
 L'objectif de ce projet est de calculer la prévision de la location de vélos au quotidien en fonction des paramètres liés à l'environnement.
 
-Pour se faire, nous utilisons deux modèles de Machines Learning à savoir Random Forest et Gradient Boost afin d'améliorer davantage les capacités de prédiction.
+Pour ce faire, nous utilisons deux modèles de Machines Learning à savoir Random Forest et Gradient Boost afin d'améliorer davantage les capacités de prédiction.
 
 ## Données
 Les données utilisées pour ce projet proviennent de <a href="https://assets-datascientest.s3-eu-west-1.amazonaws.com/de/total/bike.csv" target="_blank"> cette source</a>.
@@ -42,7 +42,7 @@ Les données utilisées pour ce projet proviennent de <a href="https://assets-da
 ## Installation des outils de fonctionnement de l'api
 Bien que pas obligatoire, dans ce projet nous avons fait le choix d'utiliser les outils suivants pour nous aider dans la prédiction du nombre de vélos à la location au lendemain  :
 - Docker hub : service de registre de référentiel fourni par Docker Inc
-- Docker Desktop : installeur Windows qui contient plusieurs outils et qui va permettre d’utiliser Docker en ligne de commande mais également avec une interface graphique pour la gestion des images et des conteneurs
+- Docker Desktop : installateur Windows qui contient plusieurs outils et qui va permettre d’utiliser Docker en ligne de commande mais également avec une interface graphique pour la gestion des images et des conteneurs
 
 Installation :
 
@@ -50,14 +50,14 @@ Installation :
 	
 2. Installer Docker Desktop en local, s'identifier pour avoir accès au repository "24241702 / bike_docker_image"
 	
-3. Aller sur l'image "24241702 / bike_docker_image" et cliquer sur les 3 points en bleu pour sélectionnez "push to hub".
+3. Aller sur l'image "24241702 / bike_docker_image" et cliquer sur les 3 points en bleu pour sélectionner "push to hub".
 	
 4. Aller sur Containers / Apps, notre image apparaîtra et cliquer sur "start" pour exécuter notre api
 
 
 ## Exécution de l'api
 L'api via le script python api.py, peut être exécuté de la manière ci-après :
-- Ouvrir le terminal et exécuter le fichier Docker-compose par la commande : 
+- Ouvrir le terminal et exécuter le fichier Docker-compose dans le dossier /api par la commande : 
 $ docker-compose up
 - Créer un environnement virtuel en local et charger les dépendances contenues dans le fichier requirements.txt
 - Ouvrir l’url http://0.0.0.0:8000/docs
@@ -68,7 +68,7 @@ Ici, nous commencerons par exécuter le premier test qui est celui de vérifier 
 
 ### Prérequis :
 
-Si besoin nous pouvons au préalable tester depuis le terminal nos scrypts python ayant un jeu de données de 24 lignes déjà préétabli, à exécuter dans le dossier test_api :
+Si besoin nous pouvons au préalable tester depuis le terminal nos scripts python ayant un jeu de données de 24 lignes déjà préétabli, à exécuter dans le dossier /test_api :
 - $ python3 prediction_rf.py
 - $ python3 prediction_gb.py
 
@@ -87,11 +87,11 @@ Cependant, nous devons avoir un jeu de données de 24 lignes représentant les l
   }
 ]
 
-Ensuite, nous allons inserré le jeu des 24 données dans le request body et exécuter les urls suivantes pour obtenir les résultats des prédictions de nos modèles de Machine Learning :
+Ensuite, nous allons insérer le jeu des 24 données dans le request body en exécutant les urls suivantes pour obtenir les résultats des prédictions de nos modèles de Machine Learning sur le jeu de données choisi :
 - Random Forest : http://localhost:8000/docs#/default/get_bike_data_prediction_rf_model_post
 - Gradient Boost : http://localhost:8000/docs#/default/get_bike_data_prediction_gb_model_post
 
-En définitif, nous constatons que la prédiction du modèle Random Forest est plus performant que celle du modèle Gracient Boost.
+En définitif, nous constatons que la prédiction du modèle Random Forest est plus performante que celle du modèle Gradient Boost.
 
 
 
