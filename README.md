@@ -16,8 +16,6 @@ Les données utilisées pour ce projet proviennent de <a href="https://assets-da
 
 ### Description des données	
 
-
-*** Code Markdown ***
 *********************
 
 | Nom de la colonne    |     Description   |
