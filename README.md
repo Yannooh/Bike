@@ -57,7 +57,7 @@ Nous devons avoir un jeu de données de 24 lignes représentants les locations h
 ]
 
 Ensuite, nous allons inserrer le jeu des 24 données dans le request body et exécuter les urls suivantes pour obtenir les résultats des prédictions de nos modèles de Machine Learning :
-- Random Forest :http://localhost:8000/docs#/default/get_bike_data_prediction_rf_model_post
+- Random Forest : http://localhost:8000/docs#/default/get_bike_data_prediction_rf_model_post
 - Gradient Boost : http://localhost:8000/docs#/default/get_bike_data_prediction_gb_model_post
 
 
