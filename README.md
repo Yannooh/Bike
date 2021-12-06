@@ -14,7 +14,7 @@ Pour se faire, nous utilisons deux modèles de Machines Learning à savoir Rando
 ## Données
 Les données utilisées pour ce projet proviennent de <a href="https://assets-datascientest.s3-eu-west-1.amazonaws.com/de/total/bike.csv" target="_blank"> cette source</a>.
 
-## installation des outils de fonctionnement de l'api
+## Installation des outils de fonctionnement de l'api
 Bien que pas obligatoire, dans ce projet nous avons fait le choix d'utiliser les outils suivants pour nous aider dans la prédiction du nombre de vélos à la location au lendemain  :
 - Docker hub : service de registre de référentiel fourni par Docker Inc
 - Docker Desktop : installeur Windows qui contient plusieurs outils et qui va permettre d’utiliser Docker en ligne de commande mais également avec une interface graphique pour la gestion des images et des conteneurs
