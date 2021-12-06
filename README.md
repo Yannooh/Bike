@@ -21,11 +21,11 @@ Bien que pas obligatoire, dans ce projet nous avons fait le choix d'utiliser les
 
 Installation :
 
-1. Créer un compte si ce n'est pas fait sur Docker Hub et cliquez sur le un repository suivant "24241702 / bike_docker_image"
+1. Créer un compte si ce n'est pas fait sur Docker Hub et cliquer sur le un repository suivant "24241702 / bike_docker_image"
 	
-2. Installer Docker Desktop en local, s'identifiez pour avoir accès au repository "24241702 / bike_docker_image"
+2. Installer Docker Desktop en local, s'identifier pour avoir accès au repository "24241702 / bike_docker_image"
 	
-3. Aller sur l'image "24241702 / bike_docker_image" et cliquez sur les 3 points en bleu pour sélectionnez "push to hub".
+3. Aller sur l'image "24241702 / bike_docker_image" et cliquer sur les 3 points en bleu pour sélectionnez "push to hub".
 	
 4. Aller sur Containers / Apps, notre image apparaîtra et cliquez sur "start" pour exécuter notre api
 
@@ -35,7 +35,7 @@ L'api via le script python api.py, peut être exécuté de la manière ci-après
 - Ouvrer le terminal et exécuter le fichier Docker-compose par la commande : 
 $ docker-compose up
 - Créer un environnement virtuel en local et charger les dépendances contenues dans le fichier requirements.txt
-- Ouvrir l’url http://0.0.0.0:8000
+- Ouvrir l’url http://0.0.0.0:8000/docs
 
 
 ## Tests
