@@ -27,7 +27,7 @@ Installation :
 	
 3. Aller sur l'image "24241702 / bike_docker_image" et cliquer sur les 3 points en bleu pour sélectionnez "push to hub".
 	
-4. Aller sur Containers / Apps, notre image apparaîtra et cliquez sur "start" pour exécuter notre api
+4. Aller sur Containers / Apps, notre image apparaîtra et cliquer sur "start" pour exécuter notre api
 
 
 ## Exécution de l'api
@@ -45,7 +45,7 @@ Prérequis :
 Nous devons avoir un jeu de données de 24 lignes représentants les locations horaires journalières de ce type :
 [
   {
-    "dteday": "string",
+    "dteday": "20202-01-01",
     "hr": 0,
     "weathersit": "clear",
     "hum": 0,
