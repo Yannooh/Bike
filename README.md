@@ -1,4 +1,11 @@
 # Prévision du nombre de vélos pris le lendemain pour un service de location
+## Contenu:
+- Introduction
+- Données
+- Installation des outils de fonctionnement de l'api
+- Exécution de l'api
+- Tests
+
 ## Introduction
 L'objectif de ce projet est de calculer la prévision de la location de vélos au quotidien en fonction des paramètres liés à l'environnement.
 
@@ -7,33 +14,29 @@ Pour se faire, nous utilisons deux modèles de Machines Learning à savoir Rando
 ## Données
 Les données utilisées pour ce projet proviennent de <a href="https://assets-datascientest.s3-eu-west-1.amazonaws.com/de/total/bike.csv" target="_blank"> cette source</a>.
 
-## Contenu:
-Dossiers :
-- api : 
---> api.py : scrypt python qui retranscrit les étapes nécessaires à l'obtention des résultats de notre prédiction.
---> Dockerfile : création de l'image docker
---> Docker-compose : containerisation de notre api
+## installation des outils de fonctionnement de l'api
+Bien que pas obligatoire, dans ce projet nous avons fait le choix d'utiliser les outils suivants pour nous aider dans la prédiction du nombre de vélos à la location au lendemain  :
+- Docker hub : service de registre de référentiel fourni par Docker Inc
+- Docker Desktop : installeur Windows qui contient plusieurs outils et qui va permettre d’utiliser Docker en ligne de commande mais également avec une interface graphique pour la gestion des images et des conteneurs
 
-- test_api
--->
--->
+Installation :
 
-- training
--->
--->
+Installation
 
-- gitignore : éléments dont la visibilité n'est pas nécessaire.
+	1. Créez un compte si ce n'est pas fait sur Docker Hub et cliquez sur le un repository suivant "24241702 / bike_docker_image"
+	
+	2. Installez Docker Desktop en local, s'identifiez pour avoir accès au repository "24241702 / bike_docker_image"
+	
+	3. Allez sur l'image "24241702 / bike_docker_image" et cliquez sur les 3 points en bleu pour sélectionnez "push to hub".
+	
+  4. Allez sur Containers / Apps, notre image apparaîtra et cliquez sur "start" pour exécuter notre api
 
 
 ## Exécution de l'api
-L'api via le script python api.py, peut être exécuter de deux manières possibles :
-- python3
-- docker
+L'api via le script python api.py, peut être exécuté de la manière ci-après :
+- Ouvrez le terminal et exécuter le fichier Docker-compose par la commande : 
+$ docker-compose up
+- Créez un environnement virtuel en local et charger les dépendances contenues dans le fichier requirements.txt
+- Tapez la commande suivante qui permet de lancer le serveur crée par FastAPI : uvicorn api:api --reload
 
-Python3
-Pour lancer l'api, on peut procéder de la manière suivante :
-1. Créer un environnement virtuel en local et charger les dépendances contenues dans le fichier requirements.txt
-2. Tapez la commande suivante qui permet de lancer le serveur crée par FastAPI : uvicorn api:api --reload
-3. Testez les requêtes ci-après pour voir
-4.
 
