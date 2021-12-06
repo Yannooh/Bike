@@ -21,13 +21,21 @@ Les données utilisées pour ce projet proviennent de <a href="https://assets-da
 | Nom de la colonne    |     Description   |
 | ------------- |: -------------: |
 | dteday        |        jour au format yyyy-mm-dd      |
+--- | --- |
 | hr            |        heure    |
+--- | --- |
 | weathersit    |        classe de la météo      |
+--- | --- |
 | hum           |        humidité relative       |
+--- | --- |
 | windspeed     |        vitesse du vent       |
+--- | --- |
 | temp          |        température en °C       |
+--- | --- |
 | atemp         |        température ressentie en °C      |
+--- | --- |
 | cnt           |        décompte du nombre de vélos utilisés à cette heure        |
+--- | --- |
 
 
 
