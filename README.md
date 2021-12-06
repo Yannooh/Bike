@@ -87,7 +87,7 @@ Cependant, nous devons avoir un jeu de données de 24 lignes représentant les l
   }
 ]
 
-Ensuite, nous allons inserrer le jeu des 24 données dans le request body et exécuter les urls suivantes pour obtenir les résultats des prédictions de nos modèles de Machine Learning :
+Ensuite, nous allons inserré le jeu des 24 données dans le request body et exécuter les urls suivantes pour obtenir les résultats des prédictions de nos modèles de Machine Learning :
 - Random Forest : http://localhost:8000/docs#/default/get_bike_data_prediction_rf_model_post
 - Gradient Boost : http://localhost:8000/docs#/default/get_bike_data_prediction_gb_model_post
 
