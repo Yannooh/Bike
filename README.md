@@ -45,7 +45,7 @@ Prérequis :
 Nous devons avoir un jeu de données de 24 lignes représentants les locations horaires journalières de ce type :
 [
   {
-    "dteday": "20202-01-01",
+    "dteday": "2021-01-01",
     "hr": 0,
     "weathersit": "clear",
     "hum": 0,
