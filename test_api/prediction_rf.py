@@ -3,7 +3,7 @@ import requests
 import json
 
 # définition de l'adresse de l'API
-api_address = '127.0.0.1'
+api_address = '0.0.0.0'
 # port de l'API
 api_port = 8000
 
