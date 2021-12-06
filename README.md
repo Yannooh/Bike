@@ -19,7 +19,7 @@ Les données utilisées pour ce projet proviennent de <a href="https://assets-da
 *********************
 
 | Nom de la colonne    |     Description   |
-
+| :-----: | :-: |
 | dteday        |        jour au format yyyy-mm-dd      |
 | :-----: | :-: |
 | hr            |        heure    |
