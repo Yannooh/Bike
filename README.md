@@ -68,12 +68,12 @@ Ici, nous commencerons par exécuter le premier test qui est celui de vérifier 
 
 ### Prérequis :
 
-Si besoin nous pouvons au préalable tester depuis le terminal nos scrypts python ayant un jeu de données de 24 lignes déjà préétablie, à exécuter dans le dossier api :
+Si besoin nous pouvons au préalable tester depuis le terminal nos scrypts python ayant un jeu de données de 24 lignes déjà préétabli, à exécuter dans le dossier test_api :
 - $ python3 prediction_rf.py
 - $ python3 prediction_gb.py
 
 
-Cependant, nous devons avoir un jeu de données de 24 lignes représentants les locations horaires journalières de ce type :
+Cependant, nous devons avoir un jeu de données de 24 lignes représentant les locations horaires journalières de ce type :
 [
   {
     "dteday": "2021-01-01",
