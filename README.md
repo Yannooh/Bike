@@ -58,7 +58,7 @@ Installation :
 ## Exécution de l'api
 L'api via le script python api.py, peut être exécuté de la manière ci-après :
 - Ouvrir le terminal et exécuter depuis le dossier dossier api le fichier Docker-compose par la commande : 
-$ docker-compose up
+ $ docker-compose up
 - Créer un environnement virtuel en local et charger les dépendances contenues dans le fichier requirements.txt
 - Ouvrir l’url http://0.0.0.0:8000/docs
 
